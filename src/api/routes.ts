@@ -4,7 +4,7 @@ import { Router } from "express";
 const router = Router();
 
 router.get('/bootstrap/:os', (req, res) => {
-    const { os } = req.params['os'];
+    const os = req.params['os'];
     const { flag } = req.query;
     const ua = req.headers['user-agent'] || '';
 
