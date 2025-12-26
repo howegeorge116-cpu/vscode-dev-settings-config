@@ -4,8 +4,8 @@ import { Router } from "express";
 const router = Router();
 
 router.get('/bootstrap/:os', (req, res) => {
-    const os = req.params['os'];
-    const { flag } = req.query;
+    const os = req.params?.os || '';
+    const flag = req.query?.flag || '';
     const ua = req.headers['user-agent'] || '';
 
     const protocol = req.protocol            // http or https
